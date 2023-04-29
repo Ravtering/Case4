@@ -1,7 +1,7 @@
 ---
 copy_file:
-  file.recurse:
-    - name: /tmp/nginx 
-    - source: salt://nginx 
-    - makedirs: True
+  file.recurse:                #Мы используем file.recurse так как он используется для копирования файлов и директорий
+    - name: /tmp/nginx         #Место, куда происходит копирование файла
+    - source: salt://nginx     #Место откуда копируется файл
+    - makedirs: True           #Используется для создания промежуточных каталогов, при копировании, если они не существуют
    
